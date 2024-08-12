@@ -1,0 +1,54 @@
+/* Header Styling */
+.header {
+  position: fixed; /* Fixes the header to the top */
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width */
+  background-color: #000; /* Black background */
+  color: #d4af37; /* Gold text */
+  padding: 1rem 0; /* Padding for spacing */
+  z-index: 1000; /* Ensures it stays above other content */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for visual separation */
+  transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.header:hover {
+  background-color: #333; /* Slightly darker background on hover */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav li {
+  display: inline;
+}
+
+.nav a {
+  color: #d4af37; /* Gold color for links */
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}

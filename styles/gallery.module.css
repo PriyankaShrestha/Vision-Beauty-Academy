@@ -1,0 +1,100 @@
+/* Container Styling */
+.container {
+  padding: 0 rem;
+  background-color: #f5f5dc; /* Beige background */
+  color: #333; /* Dark text for readability */
+}
+
+/* Navigation Menu Styling */
+.navMenu {
+  background-color: #000; /* Black background for menu */
+  padding: 1rem;
+  color: #d4af37; /* Gold text */
+}
+
+.navMenu ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navMenu li {
+  margin: 0 2rem;
+}
+
+.navMenu a {
+  color: #d4af37; /* Gold color */
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.navMenu a:hover {
+  text-decoration: underline;
+}
+
+/* Main Content Styling */
+.main {
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #d4af37; /* Gold color */
+}
+
+.description {
+  font-size: 1.25rem;
+  color: #333; /* Dark color */
+  margin-bottom: 2rem;
+}
+
+/* Gallery Section Styling */
+.gallerySection {
+  margin-bottom: 4rem;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #000; /* Black title */
+}
+
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.galleryItem {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.galleryItem:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer Styling */
+.footer {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 2rem;
+  background-color: #000; /* Black background */
+  color: #d4af37; /* Gold text */
+  border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .galleryGrid {
+    grid-template-columns: 1fr; /* Single column layout on smaller screens */
+  }
+}

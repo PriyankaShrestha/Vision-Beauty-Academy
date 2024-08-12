@@ -1,0 +1,46 @@
+/* About Page Styling */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .main {
+    flex: 1;
+    margin-top: 2rem;
+    padding: 2rem;
+    background-color: #f5f5f5; /* Light beige background */
+  }
+  
+  .title {
+    font-size: 2rem;
+    color: #000; /* Black text */
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .section {
+    margin-bottom: 2rem;
+  }
+  
+  .section h2 {
+    font-size: 1.5rem;
+    color: #d4af37; /* Gold text */
+    margin-bottom: 1rem;
+  }
+  
+  .section p {
+    font-size: 1rem;
+    color: #333; /* Dark gray text */
+    line-height: 1.6;
+  }
+  
+  .section a {
+    color: #d4af37; /* Gold link */
+    text-decoration: none;
+  }
+  
+  .section a:hover {
+    text-decoration: underline;
+  }
+  
