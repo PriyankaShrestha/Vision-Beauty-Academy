@@ -1,8 +1,8 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import Header from '../components/header/header';
 import Footer from '../components/footer/footer';
+import EmblaCarouselComponent from '../components/embla-carousel/embla-caraosel';
 
 export default function Home() {
   return (
@@ -21,15 +21,7 @@ export default function Home() {
         <p className={styles.description}>Master the art of beauty with our expert courses</p>
       </header>
 
-      {/* Hero Section */}
-      <section className={styles.hero}>
-        <Image src="/cover.jpg" alt="Beauty Academy" intrinsic="intrinsic" width={720} height={900} />
-        <h2 className={styles.heroTitle}>Transform Your Passion Into a Career</h2>
-        <p className={styles.heroSubtitle}>
-          Join us today and become a certified beauty professional.
-        </p>
-        <a href="#courses" className={styles.ctaButton}>Explore Courses</a>
-      </section>
+      <EmblaCarouselComponent />
 
       {/* Services Section */}
       <section id="courses" className={styles.services}>
