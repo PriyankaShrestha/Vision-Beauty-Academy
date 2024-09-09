@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import styles from '../styles/Home.module.css';
 import Header from '../components/header/header';
 import Footer from '../components/footer/footer';
@@ -7,13 +8,14 @@ import EmblaCarouselComponent from '../components/embla-carousel/embla-caraosel'
 export default function Home() {
   return (
     <div className={styles.container}>
+      
+      <Header />
+      
       <Head>
         <title>Vision Beauty Academy</title>
         <meta name="description" content="Welcome to our Beauty Academy" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <Header />
 
       {/* Header Section */}
       <header className={styles.header}>
@@ -28,20 +30,46 @@ export default function Home() {
         <h2 className={styles.sectionTitle}>Our Courses</h2>
         <div className={styles.grid}>
           <div className={styles.card}>
-            <h3>Makeup Artistry</h3>
-            <p>Learn the latest techniques in makeup application and artistry.</p>
+            <Link href="/">
+              <h3>Makeup</h3>
+              <p><strong>Price Range:</strong> 30000 - 70000 </p>
+              <p><strong>Duration:</strong> 1 - 5 months</p>
+            </Link>
           </div>
           <div className={styles.card}>
-            <h3>Skincare Specialist</h3>
-            <p>Become an expert in skincare and help clients achieve radiant skin.</p>
+            <Link href="/">
+              <h3>Nail nad Care</h3>
+              <p><strong>Price Range:</strong> 30000 - 50000 </p>
+              <p><strong>Duration:</strong> 1 - 5 months</p>
+            </Link>
           </div>
           <div className={styles.card}>
-            <h3>Nail Technology</h3>
-            <p>Master the art of nail design and care with our comprehensive courses.</p>
+            <Link href="/">
+              <h3>Hair Care and Updos</h3>
+              <p><strong>Price Range:</strong> 30000 - 50000 </p>
+              <p><strong>Duration:</strong> 1 - 5 months</p>
+            </Link>
           </div>
           <div className={styles.card}>
-            <h3>Hair Styling</h3>
-            <p>Learn cutting-edge hair styling techniques from top industry professionals.</p>
+            <Link href="/"> 
+              <h3>Eyebrow and Lashes</h3>
+              <p><strong>Price Range:</strong> 30000 - 50000 </p>
+              <p><strong>Duration:</strong> 1 - 5 months</p>
+              </Link>
+          </div>
+          <div className={styles.card}>
+            <Link href="/">
+              <h3>Manicure and Pedicure</h3>
+              <p><strong>Price Range:</strong> 30000 - 50000 </p>
+              <p><strong>Duration:</strong> 1 - 5 months</p>
+              </Link>
+          </div>
+          <div className={styles.card}>
+            <Link href="/">
+              <h3>Facial Treatments</h3>
+              <p><strong>Price Range:</strong> 30000 - 50000 </p>
+              <p><strong>Duration:</strong> 1 - 5 months</p>
+            </Link>
           </div>
         </div>
       </section>

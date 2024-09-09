@@ -8,7 +8,11 @@ const EmblaCarouselComponent = () => {
 
   useEffect(() => {
     if (emblaRef.current) {
-      const instance = EmblaCarousel(emblaRef.current);
+      const instance = EmblaCarousel(emblaRef.current, { loop: false,
+        speed: 10, // Adjust speed for smoother scrolling
+        draggable: true,
+        dragFree: false,
+       });
       setEmbla(instance);
 
       const onSelect = () => {
@@ -20,6 +24,18 @@ const EmblaCarouselComponent = () => {
 
       instance.on('select', onSelect);
       onSelect(); // Initialize class for the initially active slide
+
+      const autoScroll = setInterval(() => {
+        if (instance.canScrollNext()) {
+          instance.scrollNext();
+        } else {
+          instance.scrollTo(0, { skipSnaps: true }); // Go back to the first slide when reaching the end
+        }
+      }, 3500);
+      return () => {
+        clearInterval(autoScroll);
+        instance.destroy(); // Clean up instance on unmount
+      };
     }
   }, [emblaRef]);
 

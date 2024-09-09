@@ -1,0 +1,94 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1;
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: #f5f5dc; /* Light beige background */
+}
+
+.title {
+  font-size: 2rem;
+  color: #000; /* Black text */
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+.section h2 {
+  font-size: 1.5rem;
+  color: #d4af37; /* Gold text */
+  margin-bottom: 1rem;
+}
+
+.section p {
+  font-size: 1rem;
+  color: #333; /* Dark gray text */
+  line-height: 1.6;
+}
+
+.coursesList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.courseCard {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.courseCard h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.courseCard p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #141414;
+}
+
+.courseImage {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.courseCard ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  color: #141414
+}
+
+.courseCard ul ul {
+  list-style-type: circle;
+  margin-left: 20px;
+}
+
+.courseCard ul li {
+  margin-bottom: 5px;
+}
+
+/* Responsive design */
+@media (max-width: 1500px) {
+  .coursesList {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .courseCard {
+      width: 90%;
+  }
+}

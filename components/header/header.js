@@ -19,7 +19,7 @@ const Header = () => {
         <nav className={styles.nav}>
           <ul>
             <li><Link href="/">Home</Link></li>
-            <li><Link href="#courses">Courses</Link></li>
+            <li><Link href="/courses">Courses</Link></li>
             <li><Link href="/gallery">Gallery</Link></li>
             <li><Link href="/about">About</Link></li>
             <li><a href="https://www.facebook.com/VisionSalonAndAcademy" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaFacebookF/></a></li>

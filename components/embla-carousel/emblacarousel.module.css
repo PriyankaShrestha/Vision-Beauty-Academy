@@ -19,16 +19,17 @@
   touch-action: pan-y pinch-zoom;
   width: 100%;
   padding-top: 20px;
+  gap: 10px;
   margin-left: calc(var(--slide-spacing) * -1);
 }
 .embla__slide {
   position: relative;
   transform: translate3d(0, 0, 0);
-  flex: 0 0 calc(100% - 20px);
-  min-width: 0;
+  flex: 0 0 calc(100% - 10px);
+  min-width: calc(100% - 10px);
   padding-left: 0px;
   padding-right: 0px;
-  transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
 }
 .embla__slide:not(.isSnapped) {
   opacity: 0.50;
