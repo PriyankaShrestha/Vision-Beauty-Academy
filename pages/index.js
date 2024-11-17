@@ -3,6 +3,8 @@ import Link from 'next/link';
 import styles from '../styles/Home.module.css';
 import Header from '../components/header/header';
 import Footer from '../components/footer/footer';
+import React from 'react';
+import Image from 'next/image';
 import EmblaCarouselComponent from '../components/embla-carousel/embla-caraosel';
 
 export default function Home() {
@@ -10,21 +12,13 @@ export default function Home() {
     <div className={styles.container}>
       
       <Header />
-      
-      <Head>
-        <title>Vision Beauty Academy</title>
-        <meta name="description" content="Welcome to our Beauty Academy" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
 
-      {/* Header Section */}
-      <header className={styles.header}>
-        <h1 className={styles.title}>Welcome to Vision Beauty Academy</h1>
-        <p className={styles.description}>Master the art of beauty with our expert courses</p>
-      </header>
+      <video className={styles.video} autoPlay loop muted>
+        <source src="/gallery/0000-0250.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
 
-      <EmblaCarouselComponent />
-
+      <main className={styles.main}>
       {/* Services Section */}
       <section id="courses" className={styles.services}>
         <h2 className={styles.sectionTitle}>Our Courses</h2>
@@ -86,8 +80,8 @@ export default function Home() {
           <p>- Emily, Skincare Specialist</p>
         </div>
       </section>
-
-      <Footer /> {/* Add Footer here */}
+      </main>
+      <Footer />
     </div>
   );
 }

@@ -47,28 +47,7 @@ const EmblaCarouselComponent = () => {
       <div className={styles.embla__viewport} ref={emblaRef}>
         <div className={styles.embla__container}>
           <div className={styles.embla__slide}>
-            <img src="/gallery/gallery2.jpg" className={styles.embla__img} />
-          </div>
-          <div className={styles.embla__slide}>
-            <img src="/gallery/gallery6.jpg" className={styles.embla__img} />
-          </div>
-          <div className={styles.embla__slide}>
-            <img src="/gallery/gallery7.jpg"className={styles.embla__img} />
-          </div>
-          <div className={styles.embla__slide}>
-            <img src="/gallery/gallery8.jpg" className={styles.embla__img} />
-          </div>
-          <div className={styles.embla__slide}>
-            <img src="/gallery/gallery9.jpg" className={styles.embla__img} />
-          </div>
-          <div className={styles.embla__slide}>
-            <img src="/gallery/gallery12.jpg" className={styles.embla__img} />
-          </div>
-          <div className={styles.embla__slide}>
-            <img src="/gallery/gallery16.jpg"className={styles.embla__img} />
-          </div>
-          <div className={styles.embla__slide}>
-            <img src="/gallery/gallery18.jpg" className={styles.embla__img} />
+            <img src="/gallery/gallery14.jpg" className={styles.embla__img} />
           </div>
       </div>
       <button className={styles.embla__button} onClick={() => scrollPrev()}>‹</button>

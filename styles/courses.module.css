@@ -1,89 +1,107 @@
+/* Gallery Styles */
+
+/* Main container */
 .container {
+  background-color: #fdf5e6; 
+  color: #121b11;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
+/* Main content */
 .main {
-  flex: 1;
-  margin-top: 2rem;
-  padding: 2rem;
-  background-color: #f5f5dc; /* Light beige background */
-}
-
-.title {
-  font-size: 2rem;
-  color: #000; /* Black text */
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.section {
-  margin-bottom: 2rem;
-}
-
-.section h2 {
-  font-size: 1.5rem;
-  color: #d4af37; /* Gold text */
-  margin-bottom: 1rem;
-}
-
-.section p {
-  font-size: 1rem;
-  color: #333; /* Dark gray text */
-  line-height: 1.6;
-}
-
-.coursesList {
+  margin: 2rem 2rem;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.courseCard {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 20px;
-  margin: 30px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.courseCard h2 {
-  font-size: 1.5em;
-  margin-bottom: 10px;
-}
-
-.courseCard p {
-  font-size: 1.1em;
-  line-height: 1.6;
-  color: #141414;
-}
-
-.courseImage {
+/* Section holding the course cards */
+.section {
   width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 15px;
 }
 
+/* Section heading */
+.section h1 {
+  font-size: 2.5rem;
+  color: #444;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* List of courses */
+.courseList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+/* Individual course card */
+.courseCard {
+  padding: 2rem;
+  text-align: center;
+  border: 1px solid #eaeaea;
+  background-color: #d9bfb1;
+  color: #000000;
+  border-radius: 10px;
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.courseCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background-color: #f0ded0;
+}
+
+/* Styling for lists of items (what's included) */
 .courseCard ul {
   list-style-type: disc;
   margin-left: 20px;
-  color: #141414
+  max-height: 100px; /* Limit height for long lists */
+  overflow-y: auto; /* Add scrolling if the list is too long */
+  padding-right: 10px;
 }
 
-.courseCard ul ul {
-  list-style-type: circle;
-  margin-left: 20px;
+/* Scrollbar styling for long lists */
+.courseCard ul::-webkit-scrollbar {
+  width: 5px;
 }
 
+.courseCard ul::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 10px;
+}
+
+/* Truncate long list items */
 .courseCard ul li {
   margin-bottom: 5px;
+  font-size: 0.9rem;
+  line-height: 1.3;
+  white-space: nowrap; /* Keep the list on one line */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Add ellipsis (...) for long text */
 }
 
-/* Responsive design */
-@media (max-width: 1500px) {
-  .coursesList {
+.read-more-btn {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .courseList {
       flex-direction: column;
       align-items: center;
   }

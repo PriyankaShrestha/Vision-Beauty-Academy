@@ -1,15 +1,15 @@
 /* Container Styling */
 .container {
   padding: 0 rem;
-  background-color: #f5f5dc; /* Beige background */
-  color: #333; /* Dark text for readability */
+  background-color: #fdf5e6;
+  color: #000000;
 }
 
 /* Navigation Menu Styling */
 .navMenu {
-  background-color: #000; /* Black background for menu */
+  background-color: #121b11;
   padding: 1rem;
-  color: #d4af37; /* Gold text */
+  color: #000000;
 }
 
 .navMenu ul {
@@ -25,7 +25,7 @@
 }
 
 .navMenu a {
-  color: #d4af37; /* Gold color */
+  color: #98a869; /* Gold color */
   text-decoration: none;
   font-size: 1.25rem;
   font-weight: bold;
@@ -37,19 +37,22 @@
 
 /* Main Content Styling */
 .main {
-  padding: 3rem 0;
-  text-align: center;
+  margin: 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .title {
   font-size: 3rem;
   margin-bottom: 1rem;
-  color: #d4af37; /* Gold color */
+  color: #000000;
 }
 
 .description {
   font-size: 1.25rem;
-  color: #333; /* Dark color */
+  color: #121b11;
   margin-bottom: 2rem;
 }
 
@@ -61,7 +64,7 @@
 .sectionTitle {
   font-size: 2rem;
   margin-bottom: 1.5rem;
-  color: #000; /* Black title */
+  color: #121b11;
 }
 
 .galleryGrid {
@@ -82,19 +85,9 @@
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Footer Styling */
-.footer {
-  text-align: center;
-  margin-top: 3rem;
-  padding: 2rem;
-  background-color: #000; /* Black background */
-  color: #d4af37; /* Gold text */
-  border-radius: 10px;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
   .galleryGrid {
-    grid-template-columns: 1fr; /* Single column layout on smaller screens */
+    grid-template-columns: 1fr;
   }
 }

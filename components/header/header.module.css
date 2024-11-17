@@ -4,16 +4,15 @@
   top: 0;
   left: 0;
   width: 100%; /* Full width */
-  background-color: #000; /* Black background */
-  color: #d4af37; /* Gold text */
-  padding: 1rem 0; /* Padding for spacing */
+  background-color: #5a0016; 
+  padding: 0.5rem 0; /* Padding for spacing */
   z-index: 1000; /* Ensures it stays above other content */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for visual separation */
   transition: background-color 0.3s; /* Smooth background color transition */
 }
 
 .header:hover {
-  background-color: #333; /* Slightly darker background on hover */
+  background-color: #73001d;
 }
 
 .container {
@@ -43,7 +42,7 @@
 }
 
 .nav a {
-  color: #d4af37; /* Gold color for links */
+  color:#fff; /* Gold color for links */
   text-decoration: none;
   font-size: 1rem;
   font-weight: bold;

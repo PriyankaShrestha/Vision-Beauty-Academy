@@ -1,31 +1,41 @@
 /* Container styling */
 .container {
-  padding: 0 2rem;
-  background-color: #f5f5dc; /* Beige background */
-  color: #333; /* Dark text for readability */
+  background-color: #fdf5e6;
+  color: #000000;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-.header {
-  text-align: center;
-  margin-top: 3rem;
-  padding-top: 5rem;
-  color: #d4af37; /* Gold color for title */
+.main {
+  margin: 2rem 2rem;
 }
 
 .ctaButton {
   display: inline-block;
   margin-top: 1rem;
   padding: 0.75rem 1.5rem;
-  background-color: #000; /* Black background */
-  color: #d4af37; /* Gold text */
+  background-color: #121b11;
+  color: #98a869;
   border-radius: 5px;
   text-decoration: none;
   transition: background-color 0.3s;
 }
 
 .ctaButton:hover {
-  background-color: #d4af37; /* Gold background */
-  color: #000; /* Black text */
+  background-color: #98a869;
+  color: #121b11;
+}
+
+.video {
+  margin-top: 5rem;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 450px;
+  object-fit: cover;
 }
 
 /* Services Section */
@@ -33,11 +43,12 @@
   margin: 4rem 0;
 }
 
+
 .sectionTitle {
   font-size: 2rem;
   margin-bottom: 2rem;
   text-align: center;
-  color: #000; /* Black title */
+  color: #121b11;
 }
 
 .grid {
@@ -50,8 +61,8 @@
   padding: 2rem;
   text-align: center;
   border: 1px solid #eaeaea;
-  background-color: #333;
-  color: #f5f5dc;
+  background-color: #d9bfb1;
+  color: #000000;
   border-radius: 10px;
   transition: transform 0.2s, box-shadow 0.3s;
 }
@@ -59,15 +70,16 @@
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background-color: #f0ded0;
 }
 
 /* Testimonials Section */
 .testimonials {
   margin: 4rem 0;
-  background-color: #333; /* Dark background */
+  background-color: #d9bfb1;
   padding: 3rem;
   border-radius: 10px;
-  color: #f5f5dc; /* Beige text */
+  color: #000000;
 }
 
 .testimonial {
