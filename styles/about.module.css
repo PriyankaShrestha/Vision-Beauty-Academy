@@ -4,43 +4,110 @@
     flex-direction: column;
     min-height: 100vh;
     background-color: #fdf5e6;
+}
+
+.main {
+  flex: 1;
+  margin-top: 2rem;
+  padding: 2rem;
+}
+
+.mainimg {
+  margin-top: 5rem;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 450px;
+  object-fit: cover;
+}
+
+.aboutUs {
+  padding: 0 2rem;
+  color: #333;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #7c001f;
+}
+
+.salonIntro {
+  font-size: 1.25rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #555;
+}
+
+.intro {
+  font-size: 1.25rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #555;
+}
+
+.teamContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.teamMember {
+  background-color: #e2cabd;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 250px;
+  text-align: center;
+  flex: 1 1 200px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.teamMember:hover {
+  transform: scale(1.05);
+}
+
+.teamImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.memberName {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.memberRole {
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 1rem;
+}
+
+.memberBio {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .teamMember {
+    max-width: 100%;
   }
-  
-  .main {
-    flex: 1;
-    margin-top: 2rem;
-    padding: 2rem;
+
+  .teamImage {
+    height: 150px;
   }
-  
-  .title {
-    font-size: 2rem;
-    color: #121b11; /* Black text */
-    text-align: center;
-    margin-bottom: 2rem;
+
+  .intro {
+    font-size: 1.125rem;
   }
-  
-  .section {
-    margin-bottom: 2rem;
-  }
-  
-  .section h2 {
-    font-size: 1.5rem;
-    color: #98a869; /* Gold text */
-    margin-bottom: 1rem;
-  }
-  
-  .section p {
-    font-size: 1rem;
-    color: #121b11; /* Dark gray text */
-    line-height: 1.6;
-  }
-  
-  .section a {
-    color: #98a869; /* Gold link */
-    text-decoration: none;
-  }
-  
-  .section a:hover {
-    text-decoration: underline;
-  }
-  
+}
