@@ -1,15 +1,15 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import Header from "../components/header/header";
 import Footer from "../components/footer/footer";
+import CourseModal from "../components/CourseModal";
 import styles from "../styles/courses.module.css";
-import Link from "next/link";
 import { coursesData } from "../data/courseData";
 
 export default function Courses() {
-  // STATE: Keeps track of what the user types in the search bar
   const [searchTerm, setSearchTerm] = useState("");
+  const [selectedCourse, setSelectedCourse] = useState(null);
+  const closeModal = useCallback(() => setSelectedCourse(null), []);
 
-  // LOGIC: Filter the courses based on the search term
   const filteredCourses = coursesData.filter((course) =>
     course.mainType.toLowerCase().includes(searchTerm.toLowerCase()),
   );
@@ -21,7 +21,6 @@ export default function Courses() {
         <div className={styles.section}>
           <h1>Explore Our Courses</h1>
 
-          {/* DYNAMIC SEARCH BAR */}
           <div className={styles.searchContainer}>
             <input
               type="text"
@@ -33,13 +32,11 @@ export default function Courses() {
           </div>
 
           <div className={styles.courseList}>
-            {/* Render filtered courses instead of all courses */}
             {filteredCourses.length > 0 ? (
               filteredCourses.map((course) => (
                 <div className={styles.courseCard} key={course.id}>
                   <div className={styles.cardHeader}>
                     <h2>{course.mainType}</h2>
-                    {/* Fallback to 'TBD' if price or duration is missing */}
                     <span className={styles.badge}>
                       {course.duration || "TBD"}
                     </span>
@@ -53,12 +50,13 @@ export default function Courses() {
                   </div>
 
                   <div className={styles.cardFooter}>
-                    <Link
-                      href={`/course/${course.id}`}
+                    <button
+                      type="button"
                       className={styles.readMoreBtn}
+                      onClick={() => setSelectedCourse(course)}
                     >
                       View Course Details
-                    </Link>
+                    </button>
                   </div>
                 </div>
               ))
@@ -70,6 +68,9 @@ export default function Courses() {
           </div>
         </div>
       </main>
+
+      <CourseModal course={selectedCourse} onClose={closeModal} />
+
       <Footer />
     </div>
   );

@@ -1,0 +1,67 @@
+.section {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #1a120c;
+}
+
+.duration {
+  margin: 0;
+  color: #6b0f22;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.price {
+  margin: 0;
+  color: #2563eb;
+  font-weight: 700;
+}
+
+.button {
+  margin-top: auto;
+  padding: 0.75rem;
+  background: #2a1c14;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #6b0f22;
+}
+
+.more {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.more a {
+  color: #6b0f22;
+  font-weight: 700;
+  text-decoration: none;
+}
